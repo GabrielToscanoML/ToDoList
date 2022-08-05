@@ -28,6 +28,13 @@ btnCriaTarefa.addEventListener('click', () => {
       selectedItem = criaTarefa.className;
       verificaCores();
     });
+    criaTarefa.addEventListener('dblclick', () => {
+      if(criaTarefa.className === 'completed'){ 
+        criaTarefa.className = '';
+      } else {
+        criaTarefa.className = 'completed';
+      }
+    })
     document.getElementById('texto-tarefa').value = '';
   }
 });
