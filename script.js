@@ -49,7 +49,7 @@ const btnClearAll = document.getElementById('apaga-tudo');
 btnClearAll.addEventListener('click', apagaTodosItens);
 
 function apagaFinalizados() {
-  for (let index = 0; index < getLista.children.length; index += 1) {
+  for (let index = getLista.children.length-1; index >= 0; index -= 1) {
     if (getLista.children[index].className === 'completed'){
         getLista.children[index].remove();
     }
