@@ -9,7 +9,7 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-section {
+#principal {
   display: block;
   border-radius: 10px;
   padding: 30px;
@@ -44,6 +44,17 @@ section {
 #apaga-tudo {
   padding: auto;
   width: 120px;
+  height: 30px;
+  font-size: 18px;
+  margin-left: 10px;
+  background-color: rgb(189, 56, 56);
+  border-radius: 5px;
+  color: white;
+}
+
+#remover-finalizados {
+  padding: auto;
+  width: 170px;
   height: 30px;
   font-size: 18px;
   margin-left: 10px;
