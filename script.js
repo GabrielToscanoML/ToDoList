@@ -5,9 +5,9 @@ let selectedItem;
 let count = 0;
 
 function verificaCores() {
-  let getListaItems = document.querySelectorAll('li');
-  for(let index = 0; index < getListaItems.length; index++) {
-    if(getListaItems[index].className === selectedItem){
+  const getListaItems = document.querySelectorAll('li');
+  for (let index = 0; index < getListaItems.length; index += 1) {
+    if (getListaItems[index].className === selectedItem) {
       getListaItems[index].style.backgroundColor = 'gray';
     } else {
       getListaItems[index].style.backgroundColor = 'white';
@@ -16,23 +16,27 @@ function verificaCores() {
 }
 
 btnCriaTarefa.addEventListener('click', () => {
-  let getInputText = document.getElementById('texto-tarefa').value;
-
-  if(getInputText !== '') {
-    let criaTarefa = document.createElement('li');
+  const getInputText = document.getElementById('texto-tarefa').value;
+  if (getInputText !== '') {
+    const criaTarefa = document.createElement('li');
     criaTarefa.className = 'item' + count;
-    count++;
-
-    let textContent = document.createTextNode(getInputText);
-
+    count += 1;
+    const textContent = document.createTextNode(getInputText);
     criaTarefa.appendChild(textContent);
     getLista.appendChild(criaTarefa).lastChild;
-    
     criaTarefa.addEventListener('click', () => {
       selectedItem = criaTarefa.className;
       verificaCores();
     });
-
     document.getElementById('texto-tarefa').value = '';
   }
 });
+
+function apagaTodosItens() {
+  while(getLista.lastChild){ 
+    getLista.removeChild(getLista.lastChild);
+  }
+}
+
+const btnClearAll = document.getElementById('apaga-tudo');
+btnClearAll.addEventListener('click', apagaTodosItens);
