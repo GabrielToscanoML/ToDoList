@@ -29,18 +29,18 @@ btnCriaTarefa.addEventListener('click', () => {
       verificaCores();
     });
     criaTarefa.addEventListener('dblclick', () => {
-      if(criaTarefa.className === 'completed'){ 
+      if (criaTarefa.className === 'completed') {
         criaTarefa.className = '';
       } else {
         criaTarefa.className = 'completed';
       }
-    })
+    });
     document.getElementById('texto-tarefa').value = '';
   }
 });
 
 function apagaTodosItens() {
-  while (getLista.lastChild) { 
+  while (getLista.lastChild) {
     getLista.removeChild(getLista.lastChild);
   }
 }
@@ -49,9 +49,9 @@ const btnClearAll = document.getElementById('apaga-tudo');
 btnClearAll.addEventListener('click', apagaTodosItens);
 
 function apagaFinalizados() {
-  for (let index = getLista.children.length-1; index >= 0; index -= 1) {
-    if (getLista.children[index].className === 'completed'){
-        getLista.children[index].remove();
+  for (let index = getLista.children.length - 1; index >= 0; index -= 1) {
+    if (getLista.children[index].className === 'completed') {
+      getLista.children[index].remove();
     }
   }
 }
