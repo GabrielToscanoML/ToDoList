@@ -1,7 +1,8 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o Projeto
 
-![image](https://github.com/GabrielToscanoML/PixelsArt/assets/68169956/2162f159-17f7-40f1-9f4c-fb7360f31f92)
+![image](https://github.com/GabrielToscanoML/ToDoList/assets/68169956/9e795ca0-4e4d-4d3b-8c1c-2c90388ec92c)
+
 
 ### Desenvolvimento
 
